@@ -1,0 +1,12 @@
+node_modules/
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# cypress.env.json is committed in this exercise ONLY because Fake Store API
+# is a public sandbox and these are its documented demo credentials (not real
+# secrets). In a real project this line would stay UNCOMMENTED so the file
+# never reaches source control; real credentials would instead be injected
+# via CI/CD secret variables (CYPRESS_apiUsername / CYPRESS_apiPassword) or a
+# local, untracked cypress.env.json copied from cypress.env.json.example.
+# cypress.env.json
