@@ -108,3 +108,11 @@ cypress.env.json.example
   si se borra un carrito pre-cargado (ids 1-20) sí devuelve el objeto completo. El test de
   eliminación contempla ambos casos válidos en vez de asumir que el body del delete siempre
   refleja el carrito borrado.
+
+- **Por qué no hay fixtures en este proyecto**: los datos usados en los tests (productos, ids de
+  carrito) provienen siempre de la API en tiempo real (`GET /products`, la respuesta de
+  `POST /carts`), no de valores estáticos que tenga sentido fixturear. Los únicos datos estáticos
+  son las credenciales, y para esos se usan variables de entorno (`cypress.env.json`) en vez de
+  una fixture: es el mecanismo pensado específicamente para configuración/credenciales, mientras
+  que las fixtures son para datos de prueba estáticos — ese es el criterio usado para elegir
+  entre ambos mecanismos en este proyecto.
